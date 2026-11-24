@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞行汽车调研 | 亿航智能 EH216-S</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft Yahei",sans-serif;}
+        body{background:#f4f7fa;color:#222;line-height:1.7;}
+        header{background:#163b66;color:#fff;padding:40px 20px;text-align:center;}
+        header h1{font-size:2.2rem;margin-bottom:10px;}
+        header p{opacity:0.8;font-size:1rem;}
+        nav{background:#204b7f;padding:14px 20px;position:sticky;top:0;z-index:10;}
+        nav a{color:#fff;text-decoration:none;margin:0 14px;font-weight:500;}
+        nav a:hover{text-decoration:underline;}
+        .container{max-width:1100px;margin:0 auto;padding:30px 20px;}
+        section{background:#fff;border-radius:12px;padding:28px;margin-bottom:24px;box-shadow:0 2px 10px #00000012;}
+        h2{color:#163b66;margin-bottom:16px;border-left:5px solid #2b74c2;padding-left:12px;}
+        table{width:100%;border-collapse:collapse;margin:16px 0;}
+        th,td{border:1px solid #ddd;padding:12px;text-align:left;}
+        th{background:#e8f0fa;color:#163b66;}
+        .good{color:#008833;font-weight:bold;}
+        .bad{color:#c43333;font-weight:bold;}
+        footer{text-align:center;padding:25px;background:#163b66;color:#fff;margin-top:30px;font-size:0.9rem;}
+        .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:15px;}
+        .chart-box{width:100%;height:400px;margin:10px 0;}
+        .img-wrap{text-align:center;margin:16px 0;}
+        .img-wrap img{max-width:80%;border-radius:8px;box-shadow:0 2px 8px #00000015;}
+        .img-wrap p{margin-top:6px;color:#555;font-size:0.9rem;}
+        @media(max-width:768px){.grid{grid-template-columns:1fr;}nav a{display:inline-block;margin:6px 8px;}}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>飞行汽车全方位调研分析 — 亿航智能 EH216-S</h1>
+        <p>课程作业：飞行汽车技术基础 | 载人eVTOL低空飞行器</p>
+    </header>
+    <nav>
+        <a href="#intro">产品概述</a>
+        <a href="#spec">基础参数</a>
+        <a href="#tech">技术可行性</a>
+        <a href="#scene">应用场景</a>
+        <a href="#market">市场可行性</a>
+        <a href="#chart">数据分析</a>
+        <a href="#risk">风险总结</a>
+    </nav>
+    <div class="container">
+        <section id="intro">
+            <h2>一、产品概述</h2>
+            <div class="img-wrap">
+                <img src="https://pic.baike.soso.com/ugc/baikepic2/64342/20240314151700-1442001044_png_800_533_320044.jpg" alt="EH216-S飞行演示">
+                <p>图：亿航EH216-S城市低空试飞</p>
+            </div>
+            <p>EH216-S是亿航智能研发的双座载人eVTOL，也是<strong>全球首个获得民航局型号合格证（TC）的载人电动垂直起降飞行器</strong>。采用8轴16旋翼分布式动力构型，全自动飞行模式，无需驾驶员，乘客仅需一键选择起降点。适用于城市空中交通、低空旅游、应急救援等场景，是国内低空经济商业化标杆机型。</p>
+            <div class="img-wrap">
+                <img src="https://pic.baike.soso.com/ugc/baikepic2/64342/20240314151712-1093121044_png_800_533_307421.jpg" alt="EH216-S机身">
+                <p>图：EH216-S机身与旋翼结构</p>
+            </div>
+        </section>
+        <section id="spec">
+            <h2>二、产品基础参数</h2>
+            <table>
+                <tr><th>项目</th><th>参数</th></tr>
+                <tr><td>乘员</td><td>2人</td></tr>
+                <tr><td>最大飞行速度</td><td>130 km/h</td></tr>
+                <tr><td>标称飞行高度</td><td>300 m（城市低空）</td></tr>
+                <tr><td>最大航程</td><td>30 km</td></tr>
+                <tr><td>最大航时</td><td>25 min</td></tr>
+                <tr><td>最大起飞重量</td><td>650 kg</td></tr>
+                <tr><td>动力构型</td><td>8轴16电机，纯电分布式多旋翼</td></tr>
+                <tr><td>操控模式</td><td>全自动自动驾驶，乘客无操纵权限</td></tr>
+            </table>
+        </section>
+        <section id="tech">
+            <h2>三、技术可行性分析</h2>
+            <div class="grid">
+                <div>
+                    <h3>✅ 可行优势</h3>
+                    <ul class="good">
+                        <li>国内唯一拿到TC适航证的载人eVTOL，安全性经过民航官方验证</li>
+                        <li>分布式多旋翼，多动力冗余，单组电机失效可安全降落</li>
+                        <li>全自动飞行，消除人为操作失误风险，降低使用门槛</li>
+                        <li>三余度飞控系统，搭载毫米波雷达+视觉融合避障</li>
+                        <li>全电驱动，低噪音，适配城市环境</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>⚠️ 技术短板</h3>
+                    <ul class="bad">
+                        <li>锂电池能量密度限制，航程短，只能短途使用</li>
+                        <li>抗风能力有限，大风、雷雨天气禁止飞行</li>
+                        <li>电池快充、热管理压力大，电池更换成本高</li>
+                        <li>全自动模式下，极端故障人工无法接管</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="scene">
+            <h2>四、应用场景分析</h2>
+            <ul>
+                <li><strong>低空旅游观光（当前主力落地场景）</strong>：景区、海岛定点观光航线，封闭空域运营；</li>
+                <li><strong>城市空中摆渡</strong>：跨江、跨拥堵路段短途出行；</li>
+                <li><strong>应急救援、医疗转运</strong>：山区、灾害区域快速投送、伤员转运；</li>
+                <li><strong>城市巡检</strong>：管线、森林防火、海岸线巡检；</li>
+                <li>限制：不适合长途通勤，受续航、空域管制约束。</li>
+            </ul>
+        </section>
+        <section id="market">
+            <h2>五、市场可行性分析</h2>
+            <div class="grid">
+                <div>
+                    <h3>✅ 市场利好</h3>
+                    <ul class="good">
+                        <li>国内低空经济政策扶持，低空开放持续推进</li>
+                        <li>拥有国内独家载人TC适航证，先发优势极强</li>
+                        <li>优先B端模式：景区、文旅集团、应急单位采购，避开C端门槛</li>
+                        <li>多地城市已经落地试点运营，示范效应强</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>⚠️ 市场阻碍</h3>
+                    <ul class="bad">
+                        <li>垂直起降场站（Vertiport）基础设施稀缺</li>
+                        <li>整机采购、运维、电池更换成本高昂</li>
+                        <li>空域审批流程复杂，航线资源紧张</li>
+                        <li>大众对于低空飞行安全、噪音的接受度有待提升</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="chart">
+            <h2>六、数据分析图表</h2>
+            <div class="chart-box" id="sceneChart"></div>
+            <div class="chart-box" id="swotChart"></div>
+        </section>
+        <section id="risk">
+            <h2>七、综合总结与风险</h2>
+            <p>亿航EH216-S是国内技术和适航层面<strong>已经验证可行的载人eVTOL</strong>，是低空经济商业化的先行者。但受电池性能、空域、配套起降设施约束，大规模城市空中出租普及还需要很长时间。短期商业化路径以文旅观光、封闭空域示范运营为主；中长期需要配套法规、场站、电池技术同步迭代。</p>
+        </section>
+    </div>
+    <footer>
+        <p>课程作业 · 飞行汽车技术基础 | 调研：亿航智能 EH216-S</p>
+        <p>GitHub Public仓库作业页面</p>
+    </footer>
+    <script>
+        // 场景占比饼图
+        const sceneChart = echarts.init(document.getElementById('sceneChart'));
+        sceneChart.setOption({
+            title:{text:'EH216-S预期应用场景占比',left:'center'},
+            tooltip:{trigger:'item'},
+            series:[{
+                type:'pie',radius:['40%','70%'],
+                data:[
+                    {name:'文旅观光',value:50},
+                    {name:'空中摆渡',value:20},
+                    {name:'应急救援',value:15},
+                    {name:'巡检安防',value:10},
+                    {name:'其他',value:5}
+                ]
+            }]
+        })
+        // SWOT四象限
+        const swotChart = echarts.init(document.getElementById('swotChart'));
+        swotChart.setOption({
+            title:{text:'EH216-S SWOT分析',left:'center'},
+            radar:{
+                indicator:[
+                    {name:'优势S',max:100},
+                    {name:'劣势W',max:100},
+                    {name:'机会O',max:100},
+                    {name:'威胁T',max:100}
+                ]
+            },
+            series:[{
+                type:'radar',
+                data:[{value:[85,40,78,45],name:'综合评分'}]
+            }]
+        })
+        window.addEventListener('resize',()=>{sceneChart.resize();swotChart.resize();})
+    </script>
+</body>
+</html>
